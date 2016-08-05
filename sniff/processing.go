@@ -2,6 +2,7 @@ package sniff
 
 import (
 	"fmt"
+	"runtime"
 
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"
@@ -67,14 +68,20 @@ func (i *Instance) processPacket(packet gopacket.Packet) {
 		bdlog.Ln("TCP layer detected")
 		tcp, _ := tcpLayer.(*layers.TCP)
 		t := packet.Metadata().Timestamp
-		p := packetInfo{
-			Time: t,
-			Ack:  tcp.Ack,
-			FIN:  tcp.FIN,
+		{
+			fmt.Printf("locking, g pool: %v\n", runtime.NumGoroutine())
+			i.registry.rwm.Lock()
+			defer func() {
+				fmt.Println("unlocking")
+				i.registry.rwm.Unlock()
+			}()
+			fmt.Println("appending")
+			i.registry.store.Append(tcp.Ack, packetInfo{
+				Time: t,
+				Ack:  tcp.Ack,
+				FIN:  tcp.FIN,
+			})
 		}
-		i.registry.rwm.Lock()
-		i.registry.store.Append(tcp.Ack, p)
-		i.registry.rwm.Unlock()
 
 		if tcp.FIN {
 			i.registry.Process(tcp.Ack)

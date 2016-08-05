@@ -40,15 +40,14 @@ type (
 	}
 
 	registry struct {
-		rwm   sync.RWMutex
+		rwm   *sync.RWMutex
 		store regStore
 	}
 
 	regStore map[uint32][]packetInfo
 
-	//
 	// packetSrc uint
-	//
+
 	packetInfo struct {
 		// From packetSrc
 		Time time.Time
