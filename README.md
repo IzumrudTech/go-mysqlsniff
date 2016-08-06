@@ -28,11 +28,14 @@ make rel
 ```
 
 # Additional info / Дополнительная информация
-Просим поддержать проект. Деньги пойдут на развитие проекта и на лечение детей, больных наследственными заболеваниями (https://help.guava.by/).
-
 Please support this project. The money will be spent on development of the project and for the treatment of children with hereditary diseases. You can find out more [here](https://help.guava.by/).
 
+Просим поддержать проект. Деньги пойдут на развитие проекта и на лечение детей, больных наследственными заболеваниями (https://help.guava.by/).
+
 # Payment requisites / Реквизиты
+[BY requisites](https://help.guava.by/rekvizity-v-belorusskih-rublyah/)
+
+[EUR/USD/RUB requisites scans](https://help.guava.by/rekvizity-v-inostrannih-valutah/)
 ## EUR
 ```
 BENEFICIARY: Pastuknou Mikhail
@@ -55,7 +58,7 @@ DEUTBEFF EUR 100-949811410
 
 ## USD
 ```
-BENEFICIARY: Пастухов Михаил Александрович
+BENEFICIARY: Пастухов Михаил Александрович (Pastuknou Mikhail)
 ACCOUNT: 000004
 BENEFICIARYS BANK
 BELARUSBANK
@@ -99,7 +102,7 @@ and the purchase of medicines.
 БАНК КОРРЕСПОНДЕНТ
 30111810755550000149
 ОАО "БАНК ВТБ" Г. САНКТ-ПЕТЕРБУРГ
-К/С 301018107000000000187
+К/С 30101810700000000187
 В ОПЕРУ МОСКОВСКОГО ГТУ
 БАНКА РОССИИ, Г.МОСКВА
 БИК 044525187
