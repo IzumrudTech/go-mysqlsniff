@@ -3,7 +3,7 @@
 MySQL query time logger
 
 # Requirements to run
-Needs to run under root user.
+Needs to run as `root` user.
 
 # Compiling dev branch
 ### Release
